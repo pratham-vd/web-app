@@ -52,6 +52,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { InputAmountComponent } from './input-amount/input-amount.component';
 import { InputPasswordComponent } from './input-password/input-password.component';
 import { DatetimePickerStubComponent } from './datetime-picker-stub/datetime-picker-stub.component'; // import Datetime Picker Stub
+import { RiskCheckDialogComponent } from './risk-check-dialog/risk-check-dialog.component';
 
 /**
  * Shared Module
@@ -108,8 +109,10 @@ import { DatetimePickerStubComponent } from './datetime-picker-stub/datetime-pic
     DropdownComponent,
     InputAmountComponent,
     InputPasswordComponent,
-    DatetimePickerStubComponent // temporarily added stub for datetime picker
+    DatetimePickerStubComponent, // temporarily added stub for datetime picker
+    RiskCheckDialogComponent
   ],
+  declarations: [],
   exports: [
     FileUploadComponent,
     FooterComponent,
@@ -144,7 +147,8 @@ import { DatetimePickerStubComponent } from './datetime-picker-stub/datetime-pic
     LongTextComponent,
     DropdownComponent,
     InputAmountComponent,
-    DatetimePickerStubComponent // Export stub for datetime picker
+    DatetimePickerStubComponent, // Export stub for datetime picker
+    RiskCheckDialogComponent
 
   ]
 })

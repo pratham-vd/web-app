@@ -1,0 +1,25 @@
+<div class="risk-card" [ngClass]="data.risk.color">
+  <div class="risk-header">
+    <div class="risk-icon">
+      <span *ngIf="data.risk.level === 'Low'">🟢</span>
+      <span *ngIf="data.risk.level === 'Medium'">🟡</span>
+      <span *ngIf="data.risk.level === 'High'">🔴</span>
+      <span *ngIf="data.risk.level === 'Unknown'">⚪</span>
+    </div>
+    <div class="risk-title">
+      <h2>{{ data.risk.level | uppercase }} RISK</h2>
+      <p class="client-name">Client: {{ data.clientName }}</p>
+    </div>
+  </div>
+
+  <div class="risk-body">
+    <p class="reasoning">{{ data.risk.reasoning }}</p>
+    <p *ngIf="data.risk.score !== undefined" class="score">
+      Repayment Rate: {{ data.risk.score * 100 | number: '1.0-2' }}%
+    </p>
+  </div>
+
+  <div class="risk-footer">
+    <button mat-button (click)="close()">Close</button>
+  </div>
+</div>

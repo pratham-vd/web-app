@@ -718,4 +718,14 @@ export class LoansService {
   getLoanDisbursementDetailsData(): DisbursementData[] {
     return JSON.parse(localStorage.getItem('disbursementData'));
   }
+
+  /**
+   * Get all loans for a specific client
+   * @param clientId Client ID
+   * @returns Observable of loans list
+   */
+  getClientLoans(clientId: string): Observable<any> {
+    const httpParams = new HttpParams().set('clientId', clientId).set('tenantIdentifier', 'default'); // As per requirement
+    return this.http.get('/loans', { params: httpParams });
+  }
 }
